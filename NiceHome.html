@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #007BFF;
+            padding: 10px 20px;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .navbar .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar ul li {
+            margin: 0 15px;
+        }
+        .navbar ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .navbar ul li a:hover {
+            text-decoration: underline;
+        }
+        .navbar .search-bar {
+            display: flex;
+            align-items: left;
+        }
+        .navbar .search-bar input {
+            padding: 5px;
+            border: none;
+            border-radius: 1.5px;
+            margin-right: 10px;
+        }
+        .navbar .search-bar button {
+            padding: 5px 10px;
+            background-color: #0056b3;
+            color: white;
+            border: none;
+            border-radius: 1.5px;
+            cursor: pointer;
+        }
+        .navbar .search-bar button:hover {
+            background-color: #003f7f;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+        }
+        .card h3 {
+            margin: 0 0 10px;
+        }
+        .link-button {
+            display: inline-block;
+            padding: 10px 30px;
+            background-color: #000000;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 16px;
+            text-align : left;
+        }
+        .link-button:hover {
+            background-color: #1b1b1b;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">MyWebsite</div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+            <button>Search</button>
+        </div>
+    </div>
+    <div style="padding: 20px;">
+        <h1>Welcome to My Website</h1>
+        <p>Scroll down to see the sticky navbar in action.</p>
+    </div>
+    <div style="padding: 20px;">
+        <div class="card">
+            <h3>Reading Book</h3>
+            <p>You can read book here, but how to do it? First Click The Button Under This Card, then you can read Book</p>
+        </div>
+        <div class="card">
+            <h3>Another Card</h3>
+            <p>This is another card component. You can add more cards as needed.</p>
+        </div>
+         <a href="https://example.com" class="link-button">Read a Book!</a>
+        </div>
+</body>
+</html>
