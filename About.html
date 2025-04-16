@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Poppins, sans-serif;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #007BFF;
+            padding: 10px 20px;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .navbar .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar ul li {
+            margin: 0 15px;
+        }
+        .navbar ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .navbar ul li a:hover {
+            text-decoration: underline;
+        }
+        .navbar .search-bar {
+            display: flex;
+            align-items: left;
+        }
+        .navbar .search-bar input {
+            padding: 5px;
+            border: none;
+            border-radius: 1.5px;
+            margin-right: 10px;
+        }
+        .navbar .search-bar button {
+            padding: 5px 10px;
+            background-color: #0056b3;
+            color: white;
+            border: none;
+            border-radius: 1.5px;
+            cursor: pointer;
+        }
+        .navbar .search-bar button:hover {
+            background-color: #003f7f;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+        }
+        .card h3 {
+            margin: 0 0 10px;
+        }
+        .link-button {
+          display: inline-block;
+          padding: 10px 30px;
+          font-size: 12px;
+          color: black;
+          background-color: transparent;
+          border: 2px solid black;
+          border-radius: 20px;
+          text-decoration: none;
+          text-align: center;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          width: 150px;
+          margin: 10px 0;
+          height: 15px;
+        }
+        .link-button:hover {
+            background-color: black;
+            color: white;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .contact-container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .contact-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .contact-container input, .contact-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .contact-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .contact-container button:hover {
+            background-color: #0056b3;
+        }
+        .message {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        .success {
+            color: green;
+        }
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">AboutWebsite</div>
+        <ul>
+            <li><a href="file:///C:/Users/Lenovo/OneDrive/Desktop/Google%20Plus/NiceHome.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+            <button>Search</button>
+        </div>
+    </div>
+    <div style="padding: 20px;">
+        <h1> About Website </h1>
+        <p>You can see the milestone one</p>
+    </div>
+    <div class="card">
+      <p>We are a company dedicated to providing the best services.</p>
+           <h3>About Us</h3>
+       <a href="#" class="link-button">Learn More</a>
+    </div>
+    <div class="contact-container">
+        <h2>Contact Us</h2>
+        <input type="text" id="name" placeholder="Your Name">
+        <input type="email" id="email" placeholder="Your Email">
+        <textarea id="message" rows="5" placeholder="Your Message"></textarea>
+        <button onclick="submitForm()">Submit</button>
+        <p id="responseMessage" class="message"></p>
+    </div>
+
+    <script>
+        function submitForm() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            const responseMessage = document.getElementById('responseMessage');
+
+            if (name && email && message) {
+                responseMessage.textContent = "Thank you for contacting us!";
+                responseMessage.className = "message success";
+                console.log({ name, email, message }); // Example: Log the form data
+            } else {
+                responseMessage.textContent = "Please fill out all fields.";
+                responseMessage.className = "message error";
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .history-container {
+            max-width: 800px;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .history-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .timeline {
+            list-style: none;
+            padding: 0;
+            position: relative;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #007BFF;
+            transform: translateX(-50%);
+        }
+        .timeline-item {
+            position: relative;
+            margin: 20px 0;
+            width: 50%;
+            padding: 10px 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .timeline-item.left {
+            left: 0;
+        }
+        .timeline-item.right {
+            left: 50%;
+        }
+        .timeline-item h3 {
+            margin: 0 0 10px;
+        }
+        .timeline-item p {
+            margin: 0;
+        }
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            top: 20px;
+            width: 10px;
+            height: 10px;
+            background: #007BFF;
+            border-radius: 50%;
+            box-shadow: 0 0 0 3px white;
+        }
+        .timeline-item.left::after {
+            right: -5px;
+        }
+        .timeline-item.right::after {
+            left: -5px;
+        }
+    </style>
+    <div class="history-container">
+        <h2>Our milestone</h2>
+        <ul class="timeline">
+            <li class="timeline-item left">
+                <h3>2016</h3>
+                <p>This Website was created and full decoration</p>
+            </li>
+            <li class="timeline-item right">
+                <h3>2019</h3>
+                <p>This Website was updated to the new version of MyWeb</p>
+            </li>
+            <li class="timeline-item left">
+                <h3>2022</h3>
+                <p>This Website was public and now you can visit our website</p>
+            </li>
+            <li class="timeline-item right">
+                <h3>2025</h3>
+                <p>Celebrated 20 years of excellence in the industry.</p>
+            </li>
+        </ul>
+</body>
+</html>
